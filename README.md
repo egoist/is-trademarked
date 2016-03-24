@@ -13,10 +13,26 @@ $ npm install --save is-trademarked
 ```js
 const isTrademarked = require('is-trademarked')
 
+// not trademarked yet
 isTrademarked('unicorns')
   .then(trademarked => {
     console.log(trademarked) //=> false
   })
+
+// trademarked
+// return an array which contains a single item
+isTrademarked('apple')
+  .then(trademarks => {
+    if (trademarks) {
+      trademarks.forEach(t => console.log(t.wordmark))
+    }
+  })
+
+// wildcard
+// return an array which contains multiple items
+// it searches `macbook` `macbook air` etc...
+isTrademarked('mac*')
+  .then(/* your code */)
 ```
 
 ## API
@@ -27,7 +43,21 @@ isTrademarked('unicorns')
 
 Type: `string`
 
-The word to check.
+The term to search. Support wildcard by using `*` symbol.
+
+#### return
+
+```js
+[
+  {
+    wordmark: 'NAME',
+    reg: Tue May 20 2008 00:00:00 GMT+0800 (CST),
+    description: 'General feature magazines',
+    sn: '77119087',
+    serviceCode: 'GS0161'
+  }
+]
+```
 
 ## Related
 

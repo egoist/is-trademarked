@@ -30,6 +30,7 @@
     "space": 2
   },
   "dependencies": {
+    "cheerio": "^0.20.0",
     "got": "^6.2.0"
   }
 }

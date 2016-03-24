@@ -1,12 +1,14 @@
 import test from 'ava'
 import fn from './'
 
-test('regged', async t => {
-  const marked = await fn('name')
-  t.true(marked)
+test('wildcard', async t => {
+  const a = await fn('name*')
+  t.true(a.length > 2)
+  t.is(a[0].wordmark, 'NAME')
 })
 
-test('not regged', async t => {
-  const marked = await fn('name-of-me')
-  t.false(marked)
+test('single', async t => {
+  const a = await fn('name')
+  t.is(a[0].wordmark, 'NAME')
+  t.is(a[0].description, 'General feature magazines')
 })
