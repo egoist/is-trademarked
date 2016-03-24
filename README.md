@@ -29,6 +29,10 @@ Type: `string`
 
 The word to check.
 
+## Related
+
+- [is-trademarked-cli](https://github.com/egoist/is-trademarked-cli) - CLI for this module
+
 ## License
 
 MIT © [EGOIST](https://github.com/egoist)
