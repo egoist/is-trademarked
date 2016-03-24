@@ -8,9 +8,6 @@ module.exports = function (word) {
   return got
     .post('http://www.markerapi.com/', {body: {token: 'C9WxnRmHjd', search: word}})
     .then(res => {
-      if (res.body.indexOf('no trademarks found') !== -1) {
-        return false
-      }
-      return true
+      return res.body.indexOf('no trademarks found') === -1
     })
 }
