@@ -4,12 +4,14 @@ const cheerio = require('cheerio')
 
 const splitMeta = (str) => str.substr(str.indexOf(':') + 1).trim()
 
-module.exports = function (word) {
+module.exports = function (word, opts) {
   if (typeof word !== 'string') {
     return Promise.reject(new TypeError(`Expected word to be string, got ${typeof word}`))
   }
+  opts = opts || {}
+  const token = opts.token || 'C9WxnRmHjd'
   return got
-    .post('http://www.markerapi.com/', {body: {token: 'C9WxnRmHjd', search: word}})
+    .post('http://www.markerapi.com/', {body: {token, search: word}})
     .then(res => {
       if (res.body.indexOf('no trademarks found') !== -1) {
         return false

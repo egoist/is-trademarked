@@ -37,13 +37,21 @@ isTrademarked('mac*')
 
 ## API
 
-### isTrademarked(input)
+### isTrademarked(input, opts)
 
 #### input
 
 Type: `string`
 
 The term to search. Support wildcard by using `*` symbol.
+
+### opts
+
+Type: `object`
+
+#### token
+
+API token to retrieve data from `markerapi.com`, sign up to get one [here](http://www.markerapi.com/) for free.
 
 #### return
 
