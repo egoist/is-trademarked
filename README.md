@@ -53,7 +53,7 @@ Type: `object`
 
 API token to retrieve data from `markerapi.com`, sign up to get one [here](http://www.markerapi.com/) for free.
 
-#### return
+### return
 
 ```js
 [
