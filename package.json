@@ -1,6 +1,6 @@
 {
   "name": "is-trademarked",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Check if a word is trademarked.",
   "license": "MIT",
   "repository": "egoist/is-trademarked",
