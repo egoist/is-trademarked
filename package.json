@@ -31,7 +31,6 @@
   },
   "dependencies": {
     "cheerio": "^0.20.0",
-    "configstore": "^2.0.0",
     "got": "^6.2.0"
   }
 }
