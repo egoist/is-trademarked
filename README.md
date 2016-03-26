@@ -45,15 +45,15 @@ Type: `string`
 
 The term to search. Support wildcard by using `*` symbol.
 
-### opts
+#### opts
 
 Type: `object`
 
-#### token
+##### token
 
 API token to retrieve data from `markerapi.com`, sign up to get one [here](http://www.markerapi.com/) for free.
 
-### return
+#### return
 
 ```js
 [
@@ -66,6 +66,8 @@ API token to retrieve data from `markerapi.com`, sign up to get one [here](http:
   }
 ]
 ```
+
+Or return `false` when it's not trademarked.
 
 ## Related
 
